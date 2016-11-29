@@ -1,0 +1,13 @@
+.jidai-calendar {
+  width: 200px;
+}
+
+.jidai-calendar-row {
+  display: flex;
+}
+
+.jidai-weekday, .jidai-day {
+  display: inline-block;
+  flex-grow: 1;
+  width: calc(100% * (1/7));
+}
