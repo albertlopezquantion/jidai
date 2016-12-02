@@ -1,5 +1,14 @@
-.jidai-calendar {
-  width: 200px;
+.jidai-calendar-header {
+  display: flex;
+  text-align: center;
+}
+
+.jidai-calendar-header-nav {
+  flex: 1;
+}
+
+.jidai-calendar-header-content {
+  flex: 2
 }
 
 .jidai-calendar-row {
@@ -9,5 +18,14 @@
 .jidai-weekday, .jidai-day {
   display: inline-block;
   flex-grow: 1;
-  width: calc(100% * (1/7));
+  width: calc(100% / 7);
+  text-align: center;
+}
+
+.jidai-today {
+  color: red;
+}
+
+.jidai-weekday {
+  font-weight: bold;
 }

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { DatePickerComponent } from '../components/datepicker.component';
 import { DateTimeService } from '../services/datetime.service';
 import { MomentPipe } from '../pipes/moment.pipe';
+import { PickerContainerComponent } from '../components/picker_container.component';
+import { JidaiDateTimeComponent } from '../components/jidai_datetime.component';
 
 
 @NgModule({
@@ -15,12 +17,16 @@ import { MomentPipe } from '../pipes/moment.pipe';
     DateTimeService
   ],
   declarations: [
+    PickerContainerComponent,
     DatePickerComponent,
-    MomentPipe
+    MomentPipe,
+    JidaiDateTimeComponent
   ],
   exports: [
+    PickerContainerComponent,
     DatePickerComponent,
-    MomentPipe
+    MomentPipe,
+    JidaiDateTimeComponent
   ]
 })
 export class JidaiModule {}
