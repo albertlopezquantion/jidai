@@ -1,0 +1,21 @@
+.clock {
+  height: 4em;
+}
+
+.clock li {
+  position: absolute;
+  list-style-type: none;
+}
+
+.clock li:nth-child(1) { transform: rotate(310deg) translate(4em) rotate(-310deg);  }
+.clock li:nth-child(2) { transform: rotate(330deg) translate(4em) rotate(-330deg); }
+.clock li:nth-child(3) { transform: rotate(0deg) translate(4em) rotate(-0deg); }
+.clock li:nth-child(4) { transform: rotate(30deg) translate(4em) rotate(-30deg); }
+.clock li:nth-child(5) { transform: rotate(60deg) translate(4em) rotate(-60deg); }
+.clock li:nth-child(6) { transform: rotate(90deg) translate(4em) rotate(-90deg); }
+.clock li:nth-child(7) { transform: rotate(120deg) translate(4em) rotate(-120deg); }
+.clock li:nth-child(8) { transform: rotate(150deg) translate(4em) rotate(-150deg); }
+.clock li:nth-child(9) { transform: rotate(180deg) translate(4em) rotate(-180deg); }
+.clock li:nth-child(10) { transform: rotate(210deg) translate(4em) rotate(-210deg); }
+.clock li:nth-child(11) { transform: rotate(240deg) translate(4em) rotate(-240deg); }
+.clock li:nth-child(12) { transform: rotate(270deg) translate(4em) rotate(-270deg); }

@@ -32,9 +32,9 @@ require('moment/locale/es');
     </span>
   </div>
   `,
-  styleUrls: ['./datepicker.component.css']
+  styleUrls: ['./jidai_datepicker.component.css']
 })
-export class DatePickerComponent {
+export class JidaiDatePickerComponent {
   @Input() locale: string;
   @Output() onDaySelected: EventEmitter<moment.Moment> = new EventEmitter<moment.Moment>();
   calendarDate = moment();

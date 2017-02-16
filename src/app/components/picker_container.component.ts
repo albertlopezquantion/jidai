@@ -5,8 +5,13 @@ import * as moment from 'moment';
   selector: 'jidai-picker-container',
   template: `
   <div class="jidai-container">
-    <jidai-date-picker locale="es" (onDaySelected)="onDaySelected($event)">
-    </jidai-date-picker>
+    <div class="jidai-container-arrow"></div>
+    <div class="jidai-container-content">
+      <jidai-date-picker locale="es" *ngIf="isDateSelection" (onDaySelected)="onDaySelected($event)">
+      </jidai-date-picker>
+      <jidai-timepicker locale="es" *ngIf="isTimeSelection" (onTimeSelected)="onTimeSelected($event)">
+      </jidai-timepicker>
+    </div>
   </div>
   `,
   styleUrls: ['./picker_container.component.css']
@@ -14,7 +19,20 @@ import * as moment from 'moment';
 export class PickerContainerComponent {
   @Input() locale: string;
   @Output() onSelectedDate: EventEmitter<moment.Moment> = new EventEmitter<moment.Moment>();
-  onDaySelected(day: moment.Moment) {
-    this.onSelectedDate.emit(day);
+  dateTime: moment.Moment;
+  isDateSelection: boolean = true;
+  isTimeSelection: boolean = false;
+  onDaySelected(date: moment.Moment) {
+    this.dateTime = date;
+    this.onSelectedDate.emit(this.dateTime);
+    this.isDateSelection = false;
+    this.isTimeSelection = true;
+  }
+  onTimeSelected(time: moment.Moment) {
+    this.dateTime.hour(time.hour());
+    this.dateTime.minute(time.minute());
+    this.onSelectedDate.emit(this.dateTime);
+    this.isTimeSelection = false;
+    this.isDateSelection = true;
   }
 }
