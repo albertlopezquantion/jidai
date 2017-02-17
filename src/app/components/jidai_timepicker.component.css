@@ -1,10 +1,16 @@
 .clock {
-  height: 4em;
+  position: relative;
+    height: 80px;
+    width: 80px;
+    padding: 65px 0 0 65px;
+    margin: 0 auto;
+    display: block;
 }
 
 .clock li {
   position: absolute;
   list-style-type: none;
+  cursor: pointer;
 }
 
 .clock li:nth-child(1) { transform: rotate(310deg) translate(4em) rotate(-310deg);  }

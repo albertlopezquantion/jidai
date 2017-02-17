@@ -4,8 +4,10 @@ import * as moment from 'moment';
 @Component({
   selector: 'jidai-datetime',
   template: `
+  <div style="position: relative">
   <input type="text" class="jidai-input" [(ngModel)]="dateTime" (focus)="togglePopup()" (focusout)="togglePopup()" disabled/>
   <jidai-picker-container *ngIf="popupVisible" (onSelectedDate)="onSelectedDate($event)"></jidai-picker-container>
+  </div>
   `,
   styleUrls: ['./jidai_datetime.component.css']
 })

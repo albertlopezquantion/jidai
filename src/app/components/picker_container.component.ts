@@ -5,7 +5,7 @@ import * as moment from 'moment';
   selector: 'jidai-picker-container',
   template: `
   <div class="jidai-container">
-    <div class="jidai-container-arrow"></div>
+  <div class="jidai-container-arrow"></div>
     <div class="jidai-container-content">
       <jidai-date-picker locale="es" *ngIf="isDateSelection" (onDaySelected)="onDaySelected($event)">
       </jidai-date-picker>
