@@ -6,6 +6,11 @@
   width: 300px;
   margin-left: -150px;
   left: 50%;
+  height: 150px;
+}
+
+.jidai-container-content {
+  height: 100%;
 }
 
 .jidai-container-arrow {
@@ -19,4 +24,8 @@
   position: absolute;
   left: 50%;
   top: -9px;
+}
+
+jidai-timepicker {
+  height: 100%;
 }

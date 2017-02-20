@@ -1,10 +1,10 @@
 .clock {
   position: relative;
-    height: 80px;
-    width: 80px;
-    padding: 65px 0 0 65px;
-    margin: 0 auto;
-    display: block;
+  height: 80px;
+  width: 80px;
+  padding: 65px 0 0 65px;
+  margin: 0 auto;
+  display: block;
 }
 
 .clock li {
@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.clock li:nth-child(1) { transform: rotate(310deg) translate(4em) rotate(-310deg);  }
+.clock li:nth-child(1) { transform: rotate(300deg) translate(4em) rotate(-300deg);  }
 .clock li:nth-child(2) { transform: rotate(330deg) translate(4em) rotate(-330deg); }
 .clock li:nth-child(3) { transform: rotate(0deg) translate(4em) rotate(-0deg); }
 .clock li:nth-child(4) { transform: rotate(30deg) translate(4em) rotate(-30deg); }
@@ -25,3 +25,16 @@
 .clock li:nth-child(10) { transform: rotate(210deg) translate(4em) rotate(-210deg); }
 .clock li:nth-child(11) { transform: rotate(240deg) translate(4em) rotate(-240deg); }
 .clock li:nth-child(12) { transform: rotate(270deg) translate(4em) rotate(-270deg); }
+
+.meridiem-selector {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.meridiem {
+  flex: 1;
+  cursor: pointer;
+}

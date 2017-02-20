@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
+import { Observer, Observable } from 'rxjs';
 import * as moment from 'moment';
+
+import { DateRangeEvent } from '../events/date_range_event';
+import { Role } from '../enums/role';
 
 @Injectable()
 export class DateTimeService {
-  generateCalendar(calendarDate: moment.Moment): moment.Moment[] {
-    let calendarDays = [];
-    let start = 0 - (calendarDate.clone().startOf('month').day() + (7 - moment.localeData().firstDayOfWeek())) % 7;
-    let end = 41 + start; // iterator ending point
+  dateRangeSet$: Observable<DateRangeEvent>;
+  private _dateRangeSetObserver: Observer<DateRangeEvent> = null;
 
-    for (let i = start; i <= end; i += 1) {
-      let day = calendarDate.clone().startOf('month').add(i, 'days');
-      calendarDays.push(day);
-    }
-    return calendarDays;
+  constructor() {
+    this.dateRangeSet$ = new Observable<DateRangeEvent>(observer => {
+      this._dateRangeSetObserver = observer;
+    });
+  }
+
+  setRangeDate(role: Role, date: moment.Moment) {
+    this._dateRangeSetObserver.next(new DateRangeEvent(role, date));
   }
 }

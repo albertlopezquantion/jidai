@@ -1,4 +1,16 @@
-<div style="margin-left: 20px; width: 300px;">
-  <label>Date</label>
-  <jidai-datetime [dateTime]="dateTime"></jidai-datetime>
-</div>
+<main>
+  <div>
+    <label>Date</label>
+    <jidai-datetime class="jidai-datetime" [dateTime]="dateTime"></jidai-datetime>
+  </div>
+  <div style="display: flex; margin-top: 300px">
+    <div style="flex: 1">
+      <label>Date start</label>
+      <jidai-datetime class="jidai-datetime" [dateTime]="dateTime"></jidai-datetime>
+    </div>
+    <div style="flex: 1">
+      <label>Date end</label>
+      <jidai-datetime class="jidai-datetime" [dateTime]="dateTime"></jidai-datetime>
+    </div>
+  </div>
+</main>

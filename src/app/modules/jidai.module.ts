@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { JidaiDatePickerComponent } from '../components/jidai_datepicker.component';
 import { DateTimeService } from '../services/datetime.service';
+import { CalendarService } from '../services/calendar.service';
 import { MomentPipe } from '../pipes/moment.pipe';
 import { PickerContainerComponent } from '../components/picker_container.component';
 import { JidaiDateTimeComponent } from '../components/jidai_datetime.component';
@@ -15,7 +16,8 @@ import { JidaiTimePickerComponent } from '../components/jidai_timepicker.compone
     FormsModule
   ],
   providers: [
-    DateTimeService
+    DateTimeService,
+    CalendarService
   ],
   declarations: [
     PickerContainerComponent,

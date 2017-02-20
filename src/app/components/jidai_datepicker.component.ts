@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { DateTimeService } from '../services/datetime.service';
+import { CalendarService } from '../services/calendar.service';
 import * as moment from 'moment';
 require('moment/locale/es');
 
@@ -42,15 +42,15 @@ export class JidaiDatePickerComponent {
   calendarDays: moment.Moment[];
   today: moment.Moment;
 
-  constructor(private dateTimeService: DateTimeService) {
+  constructor(private calendarService: CalendarService) {
     moment.locale(this.locale);
     this.dayNames = moment.weekdaysShort(true);
-    this.calendarDays = this.dateTimeService.generateCalendar(this.calendarDate);
+    this.calendarDays = this.calendarService.generateCalendar(this.calendarDate);
     this.today = moment().startOf('date');
   }
 
   generateCalendar() {
-    this.calendarDays = this.dateTimeService.generateCalendar(this.calendarDate);
+    this.calendarDays = this.calendarService.generateCalendar(this.calendarDate);
   }
 
   prevMonth(): void {
