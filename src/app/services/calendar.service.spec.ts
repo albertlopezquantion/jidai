@@ -6,7 +6,7 @@ import * as moment from 'moment';
 
 import { CalendarService } from './calendar.service';
 
-fdescribe('CalendarService UT', () => {
+describe('CalendarService UT', () => {
 
   beforeEach(() => {
     TestBed.resetTestEnvironment();

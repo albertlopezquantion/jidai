@@ -1,21 +1,23 @@
-import { ViewEncapsulation } from '@angular/core';
-import { async, ComponentFixture, fakeAsync, inject, TestBed, tick } from '@angular/core/testing';
-import { BaseRequestOptions, Http, Response } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { MomentPipe } from '../pipes/moment.pipe';
+
+import { CalendarService } from '../services/calendar.service';
 
 import { JidaiDatePickerComponent } from './jidai_datepicker.component';
 
-describe('ArtworkPreviewComponent UT', () => {
+fdescribe('JidaiDatePickerComponent UT', () => {
   let component: JidaiDatePickerComponent,
       fixture: ComponentFixture<JidaiDatePickerComponent>;
 
   beforeEach( async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JidaiDatePickerComponent ],
+      declarations: [
+        JidaiDatePickerComponent,
+        MomentPipe
+      ],
       providers: [
-
+        CalendarService
       ],
       imports: [  ]
   });
@@ -24,8 +26,8 @@ describe('ArtworkPreviewComponent UT', () => {
     // artworkServiceMock = fixture.debugElement.injector.get(ArtworkService);
   }));
 
-  describe('ArtworkPreviewComponent.constructor():', () => {
-    it('Should be called when an ArtworkPreviewComponent is initialized', () => {
+  describe('JidaiDatePickerComponent.constructor', () => {
+    it('Should be called when JidaiDatePickerComponent is initialized', () => {
 
       expect (component).toBeDefined();
       expect (component.constructor).toBeDefined();
