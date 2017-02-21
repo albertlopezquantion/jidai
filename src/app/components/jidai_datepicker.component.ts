@@ -12,8 +12,8 @@ require('moment/locale/es');
     </div>
     <div class="jidai-calendar-header-content">
       <div class="content">
-        <span class="month">{{calendarDate | moment: "MMMM"}}</span>
-        <span class="year">{{calendarDate | moment: "YYYY"}}</span>
+        <span class="jidai-month">{{calendarDate | moment: "MMMM"}}</span>
+        <span class="jidai-year">{{calendarDate | moment: "YYYY"}}</span>
       </div>
     </div>
     <div class="jidai-calendar-header-nav">
