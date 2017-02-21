@@ -33,3 +33,7 @@
 .jidai-day {
   cursor: pointer;
 }
+
+.nav-prev, .nav-next {
+  cursor: pointer;
+}

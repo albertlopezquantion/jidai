@@ -1,37 +1,40 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import * as moment from 'moment';
-import { Role } from '../enums/role';
-import { DateTimeService } from '../services/datetime.service';
 
 @Component({
   selector: 'jidai-datetime',
   template: `
-  <div style="position: relative">
-  <input type="text" class="jidai-input" [(ngModel)]="dateTime" (focus)="togglePopup()" (focusout)="togglePopup()" disabled/>
-  <jidai-picker-container *ngIf="popupVisible" (onSelectedDate)="onSelectedDate($event)"></jidai-picker-container>
+  <div style="position: relative" (clickOutside)="hideDateTimePicker(input)"
+    [clickOutsideExceptions]="[input, nativeElement]">
+    <input type="text" class="jidai-input" [(ngModel)]="dateTime"
+    (focus)="showDateTimePicker($event)" #input/>
+    <jidai-picker-container
+     (onSelectedDate)="onSelectedDate($event)" #dateTimePicker></jidai-picker-container>
   </div>
   `,
   styleUrls: ['./jidai_datetime.component.css']
 })
-export class JidaiDateTimeComponent implements OnInit {
+export class JidaiDateTimeComponent implements AfterViewInit {
+  @ViewChild('dateTimePicker') dateTimePicker;
   @Input() dateTime: string;
-  @Input() role: Role;
   complementaryRangeDate: moment.Moment;
-  popupVisible: boolean = true;
+  isVisible: boolean = true;
+  nativeElement;
 
-  constructor(private dateTimeService: DateTimeService) { }
-
-  ngOnInit() {
-    this.dateTimeService.dateRangeSet$
-      .filter(event => event.role === this.role)
-      .subscribe(event => this.complementaryRangeDate = event.date);
+  ngAfterViewInit() {
+    this.nativeElement = this.dateTimePicker.nativeElement;
   }
 
-  togglePopup() {
-    this.popupVisible = !this.popupVisible;
+  showDateTimePicker(event: Event) {
+    this.isVisible = true;
+  }
+
+  hideDateTimePicker(event: Event) {
+    this.isVisible = false;
   }
 
   onSelectedDate(date: moment.Moment) {
     this.dateTime = date.format('dddd, MMMM Do YYYY, h:mm:ss a');
+    this.isVisible = false;
   }
 }
