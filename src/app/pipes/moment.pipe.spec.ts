@@ -2,10 +2,10 @@ import { MomentPipe } from './moment.pipe';
 
 import * as moment from 'moment';
 
-fdescribe('PluralizePipe', () => {
+describe('MomentPipe', () => {
 
-  describe('PluralizePipe.transform', () => {
-    it('Should return a plural of a singular string', () => {
+  describe('MomentPipe.transform', () => {
+    it('Should return a date time formated.', () => {
       let pipe = new MomentPipe();
       expect(pipe.transform(moment('20170101'), 'D')).toBe('1');
       expect(pipe.transform(moment('20170101'), 'YYYY')).toBe('2017');
