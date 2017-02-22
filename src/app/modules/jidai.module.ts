@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { JidaiDatePickerComponent } from '../components/jidai_datepicker.component';
-import { DateTimeService } from '../services/datetime.service';
-import { CalendarService } from '../services/calendar.service';
-import { MomentPipe } from '../pipes/moment.pipe';
 import { PickerContainerComponent } from '../components/picker_container.component';
 import { JidaiDateTimeComponent } from '../components/jidai_datetime.component';
 import { JidaiTimePickerComponent } from '../components/jidai_timepicker.component';
+import { CalendarService } from '../services/calendar.service';
+import { MomentPipe } from '../pipes/moment.pipe';
+import { ClickOutsideDirective } from '../directives/click_outside.directive';
 
 
 @NgModule({
@@ -16,7 +16,6 @@ import { JidaiTimePickerComponent } from '../components/jidai_timepicker.compone
     FormsModule
   ],
   providers: [
-    DateTimeService,
     CalendarService
   ],
   declarations: [
@@ -24,14 +23,16 @@ import { JidaiTimePickerComponent } from '../components/jidai_timepicker.compone
     JidaiDatePickerComponent,
     MomentPipe,
     JidaiDateTimeComponent,
-    JidaiTimePickerComponent
+    JidaiTimePickerComponent,
+    ClickOutsideDirective
   ],
   exports: [
     PickerContainerComponent,
     JidaiDatePickerComponent,
     MomentPipe,
     JidaiDateTimeComponent,
-    JidaiTimePickerComponent
+    JidaiTimePickerComponent,
+    ClickOutsideDirective
   ]
 })
 export class JidaiModule {}

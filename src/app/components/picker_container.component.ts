@@ -24,7 +24,6 @@ export class PickerContainerComponent {
   isTimeSelection: boolean = false;
   onDaySelected(date: moment.Moment) {
     this.dateTime = date;
-    this.onSelectedDate.emit(this.dateTime);
     this.isDateSelection = false;
     this.isTimeSelection = true;
   }
