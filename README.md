@@ -1,9 +1,9 @@
+[![Build Status](https://travis-ci.org/albertlopezquantion/jidai.svg?branch=master)](https://travis-ci.org/albertlopezquantion/jidai)
+
 # 時代
 **jidai**: *period; epoch; era; age*
 
 jidai is an Angular 2 DateTimePicker module.
-
-[![Build Status](https://travis-ci.org/albertlopezquantion/jidai.svg?branch=master)](https://travis-ci.org/albertlopezquantion/jidai)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
