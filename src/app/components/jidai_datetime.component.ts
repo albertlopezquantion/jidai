@@ -1,29 +1,22 @@
-import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
   selector: 'jidai-datetime',
   template: `
-  <div style="position: relative" (clickOutside)="hideDateTimePicker(input)"
-    [clickOutsideExceptions]="[input, nativeElement]">
+  <div style="position: relative" (clickOutside)="hideDateTimePicker(input)">
     <input type="text" class="jidai-input" [(ngModel)]="dateTime"
-    (focus)="showDateTimePicker($event)" #input/>
+      (click)="showDateTimePicker($event)"/>
     <jidai-picker-container
-     (onSelectedDate)="onSelectedDate($event)" #dateTimePicker></jidai-picker-container>
+      (onSelectedDate)="onSelectedDate($event)" *ngIf="isVisible" ></jidai-picker-container>
   </div>
   `,
   styleUrls: ['./jidai_datetime.component.css']
 })
-export class JidaiDateTimeComponent implements AfterViewInit {
-  @ViewChild('dateTimePicker') dateTimePicker;
+export class JidaiDateTimeComponent {
   @Input() dateTime: string;
   complementaryRangeDate: moment.Moment;
-  isVisible: boolean = true;
-  nativeElement;
-
-  ngAfterViewInit() {
-    this.nativeElement = this.dateTimePicker.nativeElement;
-  }
+  isVisible: boolean = false;
 
   showDateTimePicker(event: Event) {
     this.isVisible = true;
