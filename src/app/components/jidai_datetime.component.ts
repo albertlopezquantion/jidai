@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
   selector: 'jidai-datetime',
   template: `
-  <div style="position: relative" (clickOutside)="hideDateTimePicker(input)">
+  <div style="position: relative" (jidaiClickOutside)="hideDateTimePicker(input)">
     <input type="text" class="jidai-input" [(ngModel)]="dateTime"
       (click)="showDateTimePicker($event)"/>
     <jidai-picker-container

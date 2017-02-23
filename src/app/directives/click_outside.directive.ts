@@ -1,7 +1,7 @@
-import { Directive, ElementRef, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import { Directive, ElementRef, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[clickOutside]'
+  selector: '[jidaiClickOutside]'
 })
 export class ClickOutsideDirective {
   @Output() public clickOutside = new EventEmitter();

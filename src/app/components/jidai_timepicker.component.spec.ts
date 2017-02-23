@@ -8,8 +8,6 @@ import { CalendarService } from '../services/calendar.service';
 
 import { JidaiTimePickerComponent } from './jidai_timepicker.component';
 
-import * as moment from 'moment';
-
 describe('JidaiTimePickerComponent UT', () => {
   let component: JidaiTimePickerComponent,
       fixture: ComponentFixture<JidaiTimePickerComponent>,
