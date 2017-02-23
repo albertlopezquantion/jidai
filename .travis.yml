@@ -4,7 +4,6 @@ node_js:
 script:
 - npm run lint
 deploy:
-  script: npm run build
   provider: npm
   email: albert.lopez@quantion.com
   api_key:
