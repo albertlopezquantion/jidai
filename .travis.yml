@@ -1,5 +1,13 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
 script:
-  - npm run lint
+- npm run lint
+deploy:
+  provider: npm
+  email: albert.lopez@quantion.com
+  api_key:
+    secure: I3P/s8PpaUjCHqEXZ3g1JSikQe+Sel0JuzzPlixz5Dt0+2EbhJMhqB3aPsLVrFDWBDYEw/k/8PUGUJNgUpyW6+gO2S7GFksPRwiFvRJ2EvTotJBw0dcT7cu7MrtsBPzxcQa5DF8Yg+nUyWvmRgszSr1B4j8/61zFBnbkVVy5bY2t+c6q7gCYdEhETNYl5HXrCYGCkIzcdHf0RKI8psIMT1/tw+WYFyu9OLS10giWToJSd+yoqTkClkljGyxK6l88U4wYjHp1lqJiqj7YvKz0U2PxI1QprqrdPNHLetVd7N3idG8bsrj31F+Uu3Z3KsT1LjvP+hV7FOnJX1+ygPBrSWbJ6SM031kbPXto8A3a77SPmGwXCsQs9d4H2Nd/3dNstiEx7kBSW7gJ8GyGYhwKNsBF1+tc2SIb4q3qQDGqOYN0vekM7FMfHXCe2dy0Yafx6hRBj1HSE0jqxcUWTyT6x0K3+hmuonJ/7IRkQLZJNej27OZSGGfeQpad6c20mljFQc5YiQfNGqN0EuxQvYTv7HzvORSTkInyFRp2uXkWjarDQJzI8YVyQUyJyvx1K036PD8CXAZ2fcLq/5548aTw3C6AjhLvoVCrgRdN6piQ/TuzYZIybiyqLr4s58uHVom/9qcgVWZuPunAb/cXK+tvSpkpMFDa+heqytrsupjDl1I=
+  on:
+    repo: albertlopezquantion/jidai
+    branch: master
