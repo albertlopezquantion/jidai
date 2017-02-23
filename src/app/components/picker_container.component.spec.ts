@@ -34,8 +34,7 @@ describe('PickerContainerComponent UT', () => {
       ],
       providers: [
         CalendarService
-      ],
-      imports: [  ]
+      ]
     });
 
     fixture = TestBed.createComponent(PickerContainerComponent);
@@ -45,7 +44,6 @@ describe('PickerContainerComponent UT', () => {
 
   beforeEach(() => {
     fixture.detectChanges();
-
   });
 
   describe('PickerContainerComponent.constructor', () => {
