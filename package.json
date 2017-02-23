@@ -5,7 +5,7 @@
   "main": "main.bundle.js",
   "types": "main.d.ts",
   "angular-cli": {},
-  "files": ["src/app/"],
+  "files": ["src/app"],
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
