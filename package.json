@@ -1,6 +1,6 @@
 {
   "name": "jidai",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "main.bundle.js",
   "types": "main.d.ts",
