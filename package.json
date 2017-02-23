@@ -1,11 +1,13 @@
 {
   "name": "jidai",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "main.bundle.js",
   "types": "main.d.ts",
   "angular-cli": {},
-  "files": ["src/app"],
+  "files": [
+    "src/app"
+  ],
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
