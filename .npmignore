@@ -8,3 +8,4 @@ angular-cli.json
 karma.conf.js
 protractor.conf.js
 ts.lint.json
+!dist
