@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'jidai-app-root',
+  selector: 'jidai-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
