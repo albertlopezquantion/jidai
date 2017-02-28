@@ -5,9 +5,6 @@
   "main": "main.bundle.js",
   "types": "main.d.ts",
   "angular-cli": {},
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
